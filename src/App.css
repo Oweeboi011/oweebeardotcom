@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -10,6 +11,10 @@
 
 .App-header {
   background-color: #282c34;
+  background-image: url(../src//assets/images//oweepic03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
