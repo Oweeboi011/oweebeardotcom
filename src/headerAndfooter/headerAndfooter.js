@@ -180,25 +180,29 @@ export class HeaderComponent extends Component {
   
   return (
      <div className={styles.root}>
-        <AppBar position="static" style={{backgroundColor: '#282c34'}}>
+        <AppBar position="fixed" style={{backgroundColor: 'rgba(16, 11, 30, 0.251)'}}>
           <Toolbar>
             <IconButton className={styles.menuButton} color="inherit" aria-label="Open drawer">
               <MenuIcon />
             </IconButton>
             <Typography className={styles.title} variant="h6" color="inherit" noWrap>
-              OweePenaranda.com
-            </Typography>
-
+              
+            </Typography>   
             <div className={styles.grow} style={{ marginLeft: "auto", marginRight: -12 }}/>
-            <div className={styles.sectionDesktop}>
+            <div className={xstyles.textMenufamily}>
             <Tooltip title="Professional Credentials" placement="left-start">
               <IconButton color="inherit">
-                  <RecentActors />
+               <span className={xstyles.textMenufamily}>Home</span>
+              </IconButton> 
+              </Tooltip>
+            <Tooltip title="Professional Credentials" placement="left-start">
+              <IconButton color="inherit">
+               Portfolio
               </IconButton> 
               </Tooltip>
               <Tooltip title="Development Projects" placement="left-start">
               <IconButton color="inherit">
-                  <OfflineBolt />
+              About
               </IconButton>
               </Tooltip>
               <Tooltip title="Mobile Apps" placement="left-start">
@@ -207,7 +211,7 @@ export class HeaderComponent extends Component {
                 aria-haspopup="true"
                 onClick={this.handleProfileMenuOpen}
                 color="inherit">
-                <TouchApp />
+                Adventures
               </IconButton>
               </Tooltip>
               <Tooltip title="Outdoor Adventures" placement="left-start">
@@ -240,11 +244,13 @@ export class HeaderComponent extends Component {
 export class FooterComponent extends React.Component {
   render(){
     return(
-      <div className={xstyles.footerBG}>
-        <Grid container justify="center" alignItems="center" >
-        <Avatar alt="React" src={require("../assets/images/react.png")} className={styles.avatar} />
-        <Avatar alt="Materialize-UI" src={require("../assets/images/materialize-ui.png")} className={styles.bigAvatar} />
+      <div className="appbargrid">
+            
+        <Grid container justify="center" alignItems="center" style={{backgroundColor: 'rgba(16, 11, 30, 0.251)'}}>
+        <Avatar alt="React" src={require("../assets/images/react.png")} className={styles.avatar} alignItems="center" />
+        <Avatar alt="Materialize-UI" src={require("../assets/images/materialize-ui.png")} className={styles.bigAvatar} alignItems="center"  />
       </Grid>
+
       </div>
     )
 }
