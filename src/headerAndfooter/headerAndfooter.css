@@ -8,6 +8,12 @@
   height: 60;
 }
 
+.oweeLogo {
+  height: 70px;
+  width: 90px;
+  /* margin: 3px; */
+}
+
 .footerBG {
   background-color: 'rgba(16, 11, 30, 0.251)';
   position: absolute;

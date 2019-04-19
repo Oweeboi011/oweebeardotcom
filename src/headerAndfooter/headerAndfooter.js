@@ -1,4 +1,7 @@
 import xstyles from './headerAndfooter.css';
+import op from '../assets/icons/oweepenaranda.png';
+import opw from '../assets/icons/oweepenaranda-W.png';
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -126,6 +129,10 @@ export class HeaderComponent extends Component {
     this.setState({ mobileMoreAnchorEl: null });
   };
 
+  scroll2target = (idStr) => {
+    this.setState({ mobileMoreAnchorEl: null });
+  };
+
     render(){
       const { anchorEl, mobileMoreAnchorEl } = this.state;
       const { classes } = this.props;
@@ -183,11 +190,10 @@ export class HeaderComponent extends Component {
         <AppBar position="fixed" style={{backgroundColor: 'rgba(16, 11, 30, 0.251)'}}>
           <Toolbar>
             <IconButton className={styles.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
-            </IconButton>
-            <Typography className={styles.title} variant="h6" color="inherit" noWrap>
-              
-            </Typography>   
+            {/* <img src={op} className={xstyles.oweeLogo} />  */}
+            <img src={opw} className="oweeLogo" /> 
+            
+            </IconButton>              
             <div className={styles.grow} style={{ marginLeft: "auto", marginRight: -12 }}/>
             <div className={xstyles.textMenufamily}>
             <Tooltip title="Professional Credentials" placement="left-start">
@@ -201,7 +207,7 @@ export class HeaderComponent extends Component {
               </IconButton> 
               </Tooltip>
               <Tooltip title="Development Projects" placement="left-start">
-              <IconButton color="inherit">
+              <IconButton color="inherit" onClick="">
               About
               </IconButton>
               </Tooltip>
@@ -244,8 +250,7 @@ export class HeaderComponent extends Component {
 export class FooterComponent extends React.Component {
   render(){
     return(
-      <div className="appbargrid">
-            
+      <div className="appbargrid">            
         <Grid container justify="center" alignItems="center" style={{backgroundColor: 'rgba(16, 11, 30, 0.251)'}}>
         <Avatar alt="React" src={require("../assets/images/react.png")} className={styles.avatar} alignItems="center" />
         <Avatar alt="Materialize-UI" src={require("../assets/images/materialize-ui.png")} className={styles.bigAvatar} alignItems="center"  />
