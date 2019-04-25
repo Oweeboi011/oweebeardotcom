@@ -13,23 +13,29 @@ import { HeaderComponent, FooterComponent } from './headerAndfooter/headerAndfoo
 import { Projects } from './projects/Projects'
 import { Adventure } from './adventure/Adventure'
 import { AboutMe } from './aboutme/AboutMe'
-
+import Avatar from '@material-ui/core/Avatar';
 
 class App extends Component {
+
   render() {
+    var currWidth = window.innerWidth;
+    const isMobs = currWidth <= 500;
+    const currWidth400 = (currWidth + 290).toString() + 'px';
+    var scope = {
+      splitterStyle: {
+          height: 100
+      }
+  };
+
     return (
-      <div className="App">
+      <div className="App" style={{ "width": currWidth400 }}>
+      <span>{currWidth400}</span>
         <HeaderComponent></HeaderComponent>
         <header className="App-header">
-          <div class="content">
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <div className="content">
             <div className="mainTitle"></div>
-
-            {/* <CarouselMenu></CarouselMenu> */}
-            
             <span className="mainName">OWEE </span>
             <span className="mainName margintop-ne20">PEÑARANDA </span>
-            {/* </div> */}
             <span className="mainsubTitle">Web Developer | Creative Design | Adventure Cycling</span>
             <span className="mainsubName">I'm a .NET/SharePoint developer based in Cavite, Philippines.</span>
             <span className="mainsubName">I ride bikes and absolutely love adventure cycling. </span>
@@ -51,7 +57,6 @@ class App extends Component {
         <Projects></Projects>
         <Adventure></Adventure>
         <Copyryt></Copyryt>
-        <FooterComponent></FooterComponent>
       </div>
 
     );
@@ -60,7 +65,15 @@ class App extends Component {
 class Copyryt extends Component {
   render() {
     return (
-      <span className="copyryt">© 2019 OWEE PENARANDA</span>
+      <div>
+      <div className="copyryt">
+      <Avatar alt="React" src={require("./assets/images/react.png")} className="avatar"/>
+      <Avatar alt="Materialize-UI" src={require("./assets/images/materialize-ui.png")} className="bigAvatar"/>
+      </div>
+      {/* <div className="copyryt">
+      <span>© 2019 OWEE PENARANDA</span>
+      </div> */}
+      </div>
     )
   }
 }

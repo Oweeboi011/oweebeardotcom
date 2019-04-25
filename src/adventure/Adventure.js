@@ -9,7 +9,7 @@ export class Adventure extends Component {
       <div className="AppAdv">
         <HeaderComponent></HeaderComponent>
         <header className="App-Adv">
-          <div class="content">
+          <div className="content">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <div className="mainTitleAdv"></div>
             <span className="mainNameAdv">ADVENTURE </span>

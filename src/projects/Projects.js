@@ -9,7 +9,7 @@ export class Projects extends Component {
       <div className="AppProj">
         <HeaderComponent></HeaderComponent>
         <header className="App-Project">
-          <div class="content">
+          <div className="content">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <div className="mainTitleProj"></div>
             <span className="mainNameProj">PROJECTS </span>

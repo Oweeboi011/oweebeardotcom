@@ -8,9 +8,9 @@ export class AboutMe extends Component {
     return (
       <div className="AppAM">
         <header className="App-AM">
-          <div class="content">
+          <div className="content">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            {/* <div className="mainTitleAM"></div> */}
+            <div className="mainTitleAM"></div>
             <span className="mainNameAM">ABOUT ME </span>
             {/* <span className="mainNameAM margintop-ne20AM">AND OUTDOOR LIFESTYLE </span> */}
             {/* </div> */}

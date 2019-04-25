@@ -2,10 +2,18 @@
   margin: 10;
 }
 
+.headerBar_1 {
+  width: 100% !important;
+}
+
 .bigAvatar {
   margin: 10;
   width: 60;
   height: 60;
+}
+.menuButton {
+  margin-left: -12;
+  margin-right: 20;
 }
 
 .oweeLogo {
@@ -19,8 +27,10 @@
   position: absolute;
 }
 
-.textMenufamily {
+.textMenuBar {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100% !important;
+  flex-grow: 1 !important;
 }  
 
 .appbargrid{

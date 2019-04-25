@@ -11,10 +11,10 @@
 }
 
 .mainTitleAM {
-  margin-top: 350px;
+  margin-top: 35%;
 }
 .margintop-ne20AM {
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 .copyryt {
@@ -23,14 +23,14 @@
   
 }
 .mainNameAM {
-  font-size: 150px;
+  font-size: 550%;
   text-align: left;
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color:rgba(39, 39, 39, 0.251);
 }  
 .mainsubTitleAM {
-  font-size: 40px;
+  font-size: 110%;
   text-align: left;
   margin-left: 20px;
   margin-top: 20px;
