@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Dimensions, View, Image } from 'react';
 import logo from './logo.svg';
 import fb from './assets/icons/facebook.png'
 import ig from './assets/icons/instagram.png'
@@ -8,8 +8,9 @@ import gh from './assets/icons/github.png'
 import fl from './assets/icons/flickr.png'
 import ex from './assets/icons/expo.png'
 import './App.css';
+import Carousel from 'react-bootstrap/Carousel'
+
 import { HeaderComponent, FooterComponent } from './headerAndfooter/headerAndfooter'
-// import { CarouselMenu } from './carouselMenu/carouselMenu'
 import { Projects } from './projects/Projects'
 import { Adventure } from './adventure/Adventure'
 import { AboutMe } from './aboutme/AboutMe'
@@ -19,20 +20,22 @@ class App extends Component {
 
   render() {
     var currWidth = window.innerWidth;
+
     const isMobs = currWidth <= 500;
-    const currWidth400 = (currWidth + 290).toString() + 'px';
+    const currWidth400 = (currWidth).toString() + 'px';
+    const width = '500px'
+    // const currHeight400 = (currHeight).toString() + 'px';
     var scope = {
       splitterStyle: {
-          height: 100
+        height: 100
       }
-  };
+    };
 
     return (
       <div className="App" style={{ "width": currWidth400 }}>
-      <span>{currWidth400}</span>
         <HeaderComponent></HeaderComponent>
         <header className="App-header">
-          <div className="content">
+          <div className="content">          
             <div className="mainTitle"></div>
             <span className="mainName">OWEE </span>
             <span className="mainName margintop-ne20">PEÑARANDA </span>
@@ -66,11 +69,11 @@ class Copyryt extends Component {
   render() {
     return (
       <div>
-      <div className="copyryt">
-      <Avatar alt="React" src={require("./assets/images/react.png")} className="avatar"/>
-      <Avatar alt="Materialize-UI" src={require("./assets/images/materialize-ui.png")} className="bigAvatar"/>
-      </div>
-      {/* <div className="copyryt">
+        <div className="copyryt">
+          <Avatar alt="React" src={require("./assets/images/react.png")} className="avatar" />
+          <Avatar alt="Materialize-UI" src={require("./assets/images/materialize-ui.png")} className="bigAvatar" />
+        </div>
+        {/* <div className="copyryt">
       <span>© 2019 OWEE PENARANDA</span>
       </div> */}
       </div>

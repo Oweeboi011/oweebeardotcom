@@ -27,6 +27,10 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 
+import { Projects } from '../projects/Projects'
+import { Adventure } from '../adventure/Adventure'
+import { AboutMe } from '../aboutme/AboutMe'
+
 export class HeaderComponent extends Component {
   state = {
     anchorEl: null,
@@ -40,7 +44,7 @@ export class HeaderComponent extends Component {
     }
     return (
       <div className="headerBar_1">
-        <AppBar position="fixed" style={{ backgroundColor: 'rgba(16, 11, 30, 0.251)', padding: '0px,0px,0px,0px' }}>
+        <AppBar position="fixed" style={{ backgroundColor: 'rgba(16, 11, 30, 0.1)', padding: '0px,0px,0px,0px' }}>
           <Toolbar>
             <IconButton className="menuButton" color="inherit" aria-label="Open drawer">
               <img src={opw} className="oweeLogo" />
@@ -49,11 +53,11 @@ export class HeaderComponent extends Component {
             <div>
               <Tooltip title="Home" placement="left-start" >
                 <IconButton color="inherit">
-                  <span className="textMenufamily">Home</span>
+                  <span className="textMenufamily">Home</span>`
                 </IconButton>
               </Tooltip>
               <Tooltip title="Portfolio" placement="left-start">
-                <IconButton color="inherit">
+                <IconButton color="inherit"  onClick={this.refs.Projects.getElementsByClassName('ProjectClassBlock').focus()}>
                   <span className="textMenufamily">Portfolio</span>
                 </IconButton>
               </Tooltip>
